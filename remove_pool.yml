@@ -4,7 +4,7 @@
   tasks:
   - name: Remove Pool
     avi_pool:
-      controller: "{{ inventory hostname }}"
+      controller: "{{ inventory_hostname }}"
       username: "{{ avi_username }}"
       password: "{{ avi_password }}"
       name: ansible-tower-test_pool
