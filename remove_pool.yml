@@ -2,7 +2,7 @@
 - hosts: avi-controller
   connection: local
   tasks:
-  - name: Create Pool
+  - name: Remove Pool
     avi_pool:
       controller: "{{ inventory hostname }}"
       username: "{{ avi_user }}"

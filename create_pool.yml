@@ -7,7 +7,7 @@
       controller: "{{ inventory hostname }}"
       username: "{{ avi_user }}"
       password: "{{ avi_password }}"
-      name: ansible_tower_test_pool
+      name: ansible-tower-test_pool
       state: present
       servers:
           - ip:
