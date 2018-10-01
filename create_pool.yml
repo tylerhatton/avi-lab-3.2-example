@@ -1,0 +1,18 @@
+---
+- hosts: avi-controller
+  connection: local
+  tasks:
+  - name: Create Pool
+    avi_pool:
+      controller: "{{ inventory hostname }}"
+      username: "{{ avi_user }}"
+      password: "{{ avi_password }}"
+      name: ansible_tower_test_pool
+      state: present
+      servers:
+          - ip:
+              addr: 192.168.2.41
+              type: V4
+          - ip:
+              addr: 192.168.2.42
+              type: V4

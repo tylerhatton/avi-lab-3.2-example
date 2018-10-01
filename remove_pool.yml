@@ -1,0 +1,11 @@
+---
+- hosts: avi-controller
+  connection: local
+  tasks:
+  - name: Create Pool
+    avi_pool:
+      controller: "{{ inventory hostname }}"
+      username: "{{ avi_user }}"
+      password: "{{ avi_password }}"
+      name: ansible-tower-test_pool
+      state: absent
